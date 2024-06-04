@@ -1,0 +1,37 @@
+{
+  "name": "search-for-hotel-rooms",
+  "version": "1.0.0",
+  "description": "Search for hotel rooms",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malinirs/search-for-hotel-rooms.git"
+  },
+  "keywords": [
+    "css",
+    "html",
+    "scss",
+    "js"
+  ],
+  "author": "Kris <krisriva86@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malinirs/search-for-hotel-rooms/issues"
+  },
+  "homepage": "https://github.com/malinirs/search-for-hotel-rooms#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
