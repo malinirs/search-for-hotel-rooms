@@ -35,11 +35,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: filename('css') }),
-    new HTMLWebpackPlugin({
-      filename: 'index.pug',
-      minify: false
-    }),
-    new HTMLWebpackPugPlugin()
+    new HTMLWebpackPugPlugin(),
   ],
   module: {
     rules: [
