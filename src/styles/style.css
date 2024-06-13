@@ -1,7 +1,17 @@
-.colors {
+@import url(../colors.pug);
+
+.description-colors {
+  display: flex;
+  flex-direction: row;
   font-family: Montserrat;
   font-size: 19px;
   line-height: 27.79px;
   text-align: left;
   color: #8b1a1e;
+}
+
+.color-square {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(36, 107, 39);
 }
