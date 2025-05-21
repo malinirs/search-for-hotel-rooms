@@ -1,1 +1,1 @@
-alert('Webpack is working!');
+import '../styles/main.scss';

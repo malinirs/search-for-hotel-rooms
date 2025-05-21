@@ -9,6 +9,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // выходная папка
     clean: true,
   },
+  resolve: {
+    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+  },
   module: {
     rules: [
       {

@@ -1,8 +1,26 @@
-doctype html
-html
-  head
-    meta(charset="UTF-8")
-    title Hotel Project
-    link(rel="stylesheet" href="bundle.css")
-  body
-    h1 Welcome to the Hotel Project!
+extends layouts/layout.pug
+
+block head
+  title Colors &amp; Type
+block content
+  .color-and-type
+    .color-palette
+      each color in colorPalette
+        .color-item
+          .color-box(class=color.class)
+          p
+            b= color.name
+            br
+            span= color.hex
+    .typography
+      each type in typographyStyles
+        .typography-item
+          #{type.tag}(class="typography-title")= type.name
+          #{type.tag}(class="typography-text")= type.example
+          
+  //- .form-elements
+  //-   form
+  //-     +inputField()
+  //-     +selectDropdown("guests", "Количество гостей", "Сколько гостей", "Взрослые", "Дети", "Младенцы")
+  //-     +selectDropdown("rooms", "Удобство номера", "", "Спальни", "Кровати", "Ванные комнаты")
+
