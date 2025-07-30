@@ -1,0 +1,5 @@
+mixin inputField(type="email", name="email", placeholder="Email", required=false, labelName="Text Field")
+  .form-field
+    label.form-field__label
+    | #{labelName}
+    input.form-field__control(type=type, name=name, placeholder=placeholder, required=required)

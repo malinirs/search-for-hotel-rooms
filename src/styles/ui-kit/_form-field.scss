@@ -1,0 +1,34 @@
+@use 'sass:map';
+@use '../base/_global.scss' as global;
+@use '../base/_fonts.scss' as fonts;
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field__label {
+  font-weight: fonts.$font-weight-bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.form-field__control {
+  width: 320px;
+  height: 44px;
+  border: 1px map.get(global.$colors, "dark-shade-25") solid;
+  border-radius: 4px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: fonts.$font-weight-regular;
+  font-size: fonts.$font-size-base;
+  color: map.get(global.$colors, "dark-shade-75");
+
+  &::placeholder {
+    color: map.get(global.$colors, "dark-shade-25");
+  }
+
+  &:hover, &:focus{
+    outline: none; // иначе у :focus устанавливается граница браузера
+    border: 1px map.get(global.$colors, "dark-shade-50") solid;
+  }
+}

@@ -1,4 +1,4 @@
-@use './fonts' as *;
+@use './_fonts' as *;
 
 $colors: (
   "dark-shade-100": rgba(31, 32, 65, 1),
@@ -8,14 +8,14 @@ $colors: (
   "dark-shade-5": rgba(31, 32, 65, 0.05),
   "purple": rgba(188, 156, 255, 1),
   "green": rgba(111, 207, 151, 1)
-); 
+);
 
 body {
   max-width: 1920px;
   min-width: 320px;
   font-family: Montserrat, Arial, sans-serif;
   font-weight: $font-weight-regular;
-  font-size: 14px;
+  font-size: $font-size-base;
   text-align: left;
   margin: auto;
   text-align: left;
