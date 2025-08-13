@@ -1,9 +1,13 @@
-mixin selectDropdown(name, )
+mixin selectDropdown(name, labelName, dropdownTitle, items)
   .form-field
-    label.form-field__label
-    | #{labelName}
-    select.form-field__control(name=name)
-      option Взрослые
-      option Дети
-      option Младенцы
+    label.form-field__label #{labelName}
+    .form-field__control.dropdown
+        .dropdown__title #{dropdownTitle}
+        .dropdown__menu
+          each item in items
+            .dropdown__item #{item}
+              button(type="button").dropdown__button.dropdown__button--plus
+              span.dropdown__value 0
+              button(type="button").dropdown__button.dropdown__button--minus
+
 

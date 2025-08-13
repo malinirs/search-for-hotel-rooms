@@ -1,0 +1,12 @@
+@use '../../styles/base/_fonts.scss' as fonts;
+
+.dropdown__menu {
+  display: none;
+  text-transform: uppercase;
+  font-weight: fonts.$font-weight-regular;
+}
+
+.dropdown--expanded .dropdown__menu {
+  display: block;
+}
+
