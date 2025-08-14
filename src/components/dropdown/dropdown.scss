@@ -1,12 +1,32 @@
+@use 'sass:map';
+@use '../../styles/base/_global.scss' as global;
 @use '../../styles/base/_fonts.scss' as fonts;
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
 
 .dropdown__menu {
   display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
   text-transform: uppercase;
   font-weight: fonts.$font-weight-regular;
+
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  background-color: rgb(255, 255, 255);
+  
 }
 
 .dropdown--expanded .dropdown__menu {
   display: block;
+  border: 1px map.get(global.$colors, "dark-shade-50") solid;
 }
-
