@@ -2,6 +2,10 @@
 @use '../base/_global.scss' as global;
 @use '../base/_fonts.scss' as fonts;
 
+.form-elements { // УДАЛИТЬ !!!
+  padding-left: 10px;
+}
+
 .form-field {
   display: flex;
   flex-direction: column;
