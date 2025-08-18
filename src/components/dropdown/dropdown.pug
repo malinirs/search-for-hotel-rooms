@@ -6,8 +6,13 @@ mixin selectDropdown(name, labelName, dropdownTitle, items)
         .dropdown__menu
           each item in items
             .dropdown__item #{item}
-              button(type="button").dropdown__button.dropdown__button--plus
-              span.dropdown__value 0
-              button(type="button").dropdown__button.dropdown__button--minus
+              .dropdown__item-counter
+                button(type="button").dropdown__button.dropdown__button--plus -
+                span.dropdown__value  0
+                button(type="button").dropdown__button.dropdown__button--minus +
+          .dropdown__action
+            button.dropdown__action--clear Очистить
+            button.dropdown__action--apply Применить
+
 
 
