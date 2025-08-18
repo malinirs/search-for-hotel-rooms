@@ -1,4 +1,9 @@
 @use './_fonts' as *;
+@use "sass:map";
+
+@function color($key) {
+  @return map.get($colors, $key);
+}
 
 $colors: (
   "dark-shade-100": rgba(31, 32, 65, 1),
@@ -10,6 +15,8 @@ $colors: (
   "green": rgba(111, 207, 151, 1)
 );
 
+$form-control-padding-left: 14px;
+
 body {
   max-width: 1920px;
   min-width: 320px;
@@ -19,4 +26,5 @@ body {
   text-align: left;
   margin: auto;
   text-align: left;
+  color: color("dark-shade-100");
 }

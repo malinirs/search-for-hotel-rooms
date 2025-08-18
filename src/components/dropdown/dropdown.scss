@@ -2,6 +2,8 @@
 @use '../../styles/base/_global.scss' as global;
 @use '../../styles/base/_fonts.scss' as fonts;
 
+$dark-shade-50: global.color("dark-shade-50");
+
 .dropdown {
   position: relative;
   cursor: pointer;
@@ -10,23 +12,27 @@
 
 .dropdown__menu {
   display: none;
-
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 1000;
   border-radius: 0 0 4px 4px;
+  background-color: #FFFFFF;
+  padding-left: global.$form-control-padding-left;
   text-transform: uppercase;
-  font-weight: fonts.$font-weight-regular;
-
-  border: 1px solid #ccc;
-  background-color: rgb(255, 255, 255);
+  font-weight: fonts.$font-weight-bold;
+  color: global.color("dark-shade-100");
   
+}
+
+.dropdown--expanded {
+  border: 1px $dark-shade-50 solid;
 }
 
 .dropdown--expanded .dropdown__menu {
   display: block;
-  border: 1px map.get(global.$colors, "dark-shade-50") solid;
-  
+  border: 1px $dark-shade-50 solid;
 }
+
+

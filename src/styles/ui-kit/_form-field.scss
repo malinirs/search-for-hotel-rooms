@@ -19,21 +19,21 @@
   &__control {
     width: 320px;
     height: 44px;
-    border: 1px map.get(global.$colors, "dark-shade-25") solid;
+    border: 1px global.color("dark-shade-25") solid;
     border-radius: 4px;
-    padding-left: 14px;
+    padding-left: global.$form-control-padding-left;
     font-family: Montserrat, Arial, sans-serif;
     font-weight: fonts.$font-weight-regular;
     font-size: fonts.$font-size-base;
-    color: map.get(global.$colors, "dark-shade-75");
+    color: global.color("dark-shade-75");
 
     &::placeholder {
-      color: map.get(global.$colors, "dark-shade-25");
+      color: global.color("dark-shade-25");
     }
 
     &:hover, &:focus {
       outline: none; // иначе у :focus устанавливается граница браузера
-      border: 1px map.get(global.$colors, "dark-shade-50") solid;
+      border: 1px global.color("dark-shade-50") solid;
     }
   }
 }
