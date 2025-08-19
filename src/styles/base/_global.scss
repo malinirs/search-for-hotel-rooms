@@ -18,6 +18,10 @@ $colors: (
 $border-radius: 4px;
 $form-control-padding-left: 14px;
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   max-width: 1920px;
   min-width: 320px;

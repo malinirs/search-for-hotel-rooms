@@ -10,6 +10,9 @@ module.exports = {
     clean: true,
   },
   resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
     modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
   module: {
