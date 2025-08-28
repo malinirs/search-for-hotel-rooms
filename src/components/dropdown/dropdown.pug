@@ -9,9 +9,9 @@ mixin selectDropdown(name, labelName, dropdownTitle, items)
         each item in items
           .dropdown__item #{item}
             .dropdown__item-counter
-              button(type="button").dropdown__button.dropdown__button--plus -
-              span.dropdown__value  0
-              button(type="button").dropdown__button.dropdown__button--minus +
+              button(type="button").dropdown__button.dropdown__button--minus -
+              span.dropdown__value 0
+              button(type="button").dropdown__button.dropdown__button--plus +
         .dropdown__footer
           button(type="button").dropdown__footer--clear Очистить
           button(type="button").dropdown__footer--apply Применить
