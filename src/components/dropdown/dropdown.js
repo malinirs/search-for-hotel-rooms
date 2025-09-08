@@ -34,32 +34,45 @@ function initDropdown() {
     }
 
     [...plusButtons, ...minusButtons, clearButton].forEach(button => {
-        button.addEventListener('click', (event) => {
-          event.stopPropagation();
-          if (button.classList.contains('dropdown__button--plus')) {
-            increaseValue(button);
-          } else if (button.classList.contains('dropdown__button--minus')) {
-            decreaseValue(button);
-          } else if (button.classList.contains('dropdown__footer--clear')) {
-            clearValue();
-          }
-        })
-      });
+      button.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (button.classList.contains('dropdown__button--plus')) {
+          increaseValue(button);
+        } else if (button.classList.contains('dropdown__button--minus')) {
+          decreaseValue(button);
+        } else if (button.classList.contains('dropdown__footer--clear')) {
+          clearValue();
+        }
+      })
+    });
+
+    function getdDeclensions(sum, type) {
+      const declensions = {
+        guests: ['гость', 'гостя', 'гостей'],
+        rooms: ['комната', 'комнаты', 'комнат']
+      };
+
+      if (sum === 1) {
+        return declensions[type][0];
+      } else if (sum > 1 && sum < 5) {
+        return declensions[type][1];
+      } else {
+        return declensions[type][3];
+      }
+    }
 
     applyButton.addEventListener('click', (event) => {
       event.stopPropagation();
       const counters = Array.from(dropdown.querySelectorAll('.dropdown__value'));
-      const sum = counters.reduce((currentSum, currentNumber) => {
-        return currentSum + parseInt(currentNumber.textContent, 10);
+      const sum = counters.reduce((currentSum, currentsum) => {
+        return currentSum + parseInt(currentsum.textContent, 10);
       }, 0);
-      if (sum === 1) {
-        title.textContent = sum.toString() + ' гость';
-      } else if (sum > 1 && sum < 5) {
-        title.textContent = sum.toString() + ' гостя';
-      } else if (sum > 4) {
-        title.textContent = sum.toString() + ' гостей';
-      } else {
+      const dropdownType = dropdown.dataset.dropdownType;
+
+      if (sum === 0) {
         title.textContent = initialTitle;
+      } else {
+        title.textContent = `${sum} ${getdDeclensions(sum, dropdownType)}`;
       }
     });
   })

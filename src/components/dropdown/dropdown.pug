@@ -1,7 +1,7 @@
 mixin selectDropdown(name, labelName, dropdownTitle, items)
   .form-field
     label.form-field__label #{labelName}
-    .form-field__control.dropdown
+    .form-field__control.dropdown(data-dropdown-type= name)
       .dropdown__header
         span.dropdown__title #{dropdownTitle}
         img(src=require('@/assets/images/expand_more3.jpg'), alt="Стрелка вниз").dropdown__arrow
