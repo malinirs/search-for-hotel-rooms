@@ -46,7 +46,7 @@ function initDropdown() {
       })
     });
 
-    function getdDeclensions(sum, type) {
+    function getDeclensions(sum, type) {
       const declensions = {
         guests: ['гость', 'гостя', 'гостей'],
         rooms: ['комната', 'комнаты', 'комнат']
@@ -57,7 +57,7 @@ function initDropdown() {
       } else if (sum > 1 && sum < 5) {
         return declensions[type][1];
       } else {
-        return declensions[type][3];
+        return declensions[type][2];
       }
     }
 
@@ -72,7 +72,7 @@ function initDropdown() {
       if (sum === 0) {
         title.textContent = initialTitle;
       } else {
-        title.textContent = `${sum} ${getdDeclensions(sum, dropdownType)}`;
+        title.textContent = `${sum} ${getDeclensions(sum, dropdownType)}`;
       }
     });
   })

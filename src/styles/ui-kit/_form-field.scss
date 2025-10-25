@@ -2,41 +2,36 @@
 @use '../base/_global.scss' as global;
 @use '../base/_fonts.scss' as fonts;
 
-.form-elements { // УДАЛИТЬ !!!
-  padding-left: 10px;
-}
-
 .form-field {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 
   &__label {
+    font-size: fonts.$font-size-sm;
     font-weight: fonts.$font-weight-bold;
     text-transform: uppercase;
-    margin-bottom: 5px;
   }
 
   &__control {
-    width: 320px;
-    height: 44px;
-    border: 1px global.color("dark-shade-25") solid;
-    border-radius: global.$border-radius;
-    padding: 0 global.$form-control-padding-left;
+    border: 1px solid global.getColor("dark-shade-25");
+    border-radius: global.getFieldProp("border-radius");
+    width: global.getFieldProp("width-lg");
+    height: global.getFieldProp("height");
     font-family: Montserrat, Arial, sans-serif;
     font-weight: fonts.$font-weight-regular;
     font-size: fonts.$font-size-base;
-    color: global.color("dark-shade-75");
-
-    // box-sizing: border-box;
-    // background-color: green;
+    color: global.getColor("dark-shade-75");
+    padding-left: 14px;
+    padding-right: 14px;
 
     &::placeholder {
-      color: global.color("dark-shade-25");
+      color: global.getColor("dark-shade-25");
     }
 
     &:hover, &:focus {
-      outline: none; // иначе у :focus устанавливается граница браузера
-      border: 1px global.color("dark-shade-50") solid;
+      outline: none;  // иначе у :focus устанавливается граница браузера
+      border-color: global.getColor("dark-shade-50");
     }
   }
 }

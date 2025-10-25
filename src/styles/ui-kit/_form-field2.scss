@@ -1,0 +1,49 @@
+@use 'sass:map';
+@use '../base/_global.scss' as global;
+@use '../base/_fonts.scss' as fonts;
+
+.form-elements { // УДАЛИТЬ !!!
+  padding-left: 10px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-weight: fonts.$font-weight-bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__control {
+    position: relative; 
+    width: 320px;
+    height: 44px;
+    // border: 1px global.color("dark-shade-25") solid;
+    border-radius: global.$border-radius;
+    padding: 0 global.$form-control-padding-left;
+    // font-family: Montserrat, Arial, sans-serif;
+    // font-weight: fonts.$font-weight-regular;
+    // font-size: fonts.$font-size-base;
+    // color: global.color("dark-shade-75");
+    
+    display: flex; // ✅ чтобы текст и стрелка выровнялись
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    box-sizing: border-box;
+    // background-color: green;
+
+    &::placeholder {
+      color: global.color("dark-shade-25");
+    }
+
+    &:hover, &:focus {
+      outline: none; // иначе у :focus устанавливается граница браузера
+      border: 1px global.color("dark-shade-50") solid;
+    }
+  }
+}

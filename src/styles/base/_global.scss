@@ -1,10 +1,6 @@
 @use './_fonts' as *;
 @use "sass:map";
 
-@function color($key) {
-  @return map.get($colors, $key);
-}
-
 $colors: (
   "dark-shade-100": rgba(31, 32, 65, 1),
   "dark-shade-75": rgba(31, 32, 65, 0.75),
@@ -15,8 +11,21 @@ $colors: (
   "green": rgba(111, 207, 151, 1)
 );
 
-$border-radius: 4px;
-$form-control-padding-left: 14px;
+@function getColor($key) {
+  @return map.get($colors, $key);
+}
+
+$fields: (
+  "width-sm": 150px,
+  "width-md": 266px,
+  "width-lg": 320px,
+  "height": 44px,
+  "border-radius": 4px,
+);
+
+@function getFieldProp($key) {
+  @return map.get($fields, $key);
+}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -31,5 +40,5 @@ body {
   text-align: left;
   margin: auto;
   text-align: left;
-  color: color("dark-shade-100");
+  color: getColor("dark-shade-100");
 }

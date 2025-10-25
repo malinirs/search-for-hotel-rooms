@@ -5,16 +5,16 @@ mixin selectDropdown(name, labelName, dropdownTitle, items)
       .dropdown__header
         span.dropdown__title #{dropdownTitle}
         img(src=require('@/assets/images/expand_more3.jpg'), alt="Стрелка вниз").dropdown__arrow
-      .dropdown__menu
-        each item in items
-          .dropdown__item #{item}
-            .dropdown__item-counter
-              button(type="button").dropdown__button.dropdown__button--minus -
-              span.dropdown__value 0
-              button(type="button").dropdown__button.dropdown__button--plus +
-        .dropdown__footer
-          button(type="button").dropdown__footer--clear Очистить
-          button(type="button").dropdown__footer--apply Применить
+    .dropdown__menu
+      each item in items
+        .dropdown__item #{item}
+          .dropdown__item-counter
+            button(type="button").dropdown__button.dropdown__button--minus -
+            span.dropdown__value 0
+            button(type="button").dropdown__button.dropdown__button--plus +
+      .dropdown__footer
+        button(type="button").dropdown__footer--clear Очистить
+        button(type="button").dropdown__footer--apply Применить
 
 
 
