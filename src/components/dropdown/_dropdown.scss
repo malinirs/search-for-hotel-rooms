@@ -2,7 +2,22 @@
 @use '../../styles/base/_global.scss' as global;
 @use '../../styles/base/_fonts.scss' as fonts;
 
+.form-elements { // УДАЛИТЬ!!!
+  margin-left: 30px;
+}
+
+.dropdown[data-dropdown-type="guests"] {
+  width: global.getFieldProp("width-lg");
+}
+.dropdown[data-dropdown-type="rooms"] {
+  width: global.getFieldProp("width-md");
+}
+
 .dropdown {
+  position: relative;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-sizing: border-box;
 
   &__header {
     display: flex;
@@ -12,20 +27,28 @@
     height: 44px;
     cursor: pointer;
   }
-}
-dropdown__menu {
-  display: none;
 
-  .dropdown__footer {}
+  &__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    border: 1px solid global.getColor("dark-shade-25");
+    border-bottom-left-radius: global.getFieldProp("border-radius");
+    border-bottom-right-radius: global.getFieldProp("border-radius");
+    left: -1px;
+    width: calc(100% + 2px);
+    
+    .dropdown__footer {}
+  }
 }
-
 
 .dropdown--expanded {
   .dropdown__menu {
     display: block;
-    // width: 100%;
-    // box-sizing: border-box;
-    border: 1px solid global.getColor("dark-shade-25");
-    border-radius: global.getFieldProp("border-radius");
   }
 }

@@ -22,8 +22,6 @@
     font-weight: fonts.$font-weight-regular;
     font-size: fonts.$font-size-base;
     color: global.getColor("dark-shade-75");
-    padding-left: 14px;
-    padding-right: 14px;
 
     &::placeholder {
       color: global.getColor("dark-shade-25");
@@ -33,5 +31,10 @@
       outline: none;  // иначе у :focus устанавливается граница браузера
       border-color: global.getColor("dark-shade-50");
     }
+  }
+
+  &__control--input {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
