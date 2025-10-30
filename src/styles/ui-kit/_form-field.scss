@@ -34,7 +34,7 @@
   }
 
   &__control--input {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: global.getFieldProp("padding");
+    padding-right: global.getFieldProp("padding");
   }
 }

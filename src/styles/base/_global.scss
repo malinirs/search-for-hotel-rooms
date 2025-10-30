@@ -21,6 +21,7 @@ $fields: (
   "width-lg": 320px,
   "height": 44px,
   "border-radius": 4px,
+  "padding": 14px,
 );
 
 @function getFieldProp($key) {
