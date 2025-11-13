@@ -37,7 +37,7 @@
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    z-index: 1000;
+    z-index: 100;
     background-color: #FFFFFF;
     border: 1px solid global.getColor("dark-shade-50");
     border-bottom-left-radius: global.getFieldProp("border-radius");
@@ -125,9 +125,13 @@
 }
 
 .dropdown--expanded {
+  position: relative;
+  z-index: 200;
   border-color: global.getColor("dark-shade-50");
 
   .dropdown__menu {
     display: flex;
+
+    
   }
 }
