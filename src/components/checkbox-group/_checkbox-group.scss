@@ -1,0 +1,22 @@
+// @use 'sass:map';
+// @use '../../styles/base/_global.scss' as global;
+@use '../../styles/base/_fonts.scss' as fonts;
+
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10.56px;
+  width: 222px;
+  padding: 0;
+  
+
+  border: 2px solid red;
+}
+
+.checkbox-group__title {
+  font-size: fonts.$font-size-sm;
+  font-weight: fonts.$font-weight-bold;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}

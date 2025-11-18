@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use '../../styles/base/_global.scss' as global;
+// @use '../../styles/base/_fonts.scss' as fonts;
+
+
+.checkbox {
+  color: global.getColor("dark-shade-50");
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox__input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid global.getColor("dark-shade-25");
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.checkbox__input:checked {
+  border-color: global.getColor("purple");
+  background-image: url('@/assets/images/checkbox.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox__text {
+
+}
