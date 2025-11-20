@@ -1,0 +1,6 @@
+# Все текстовые файлы автоматически нормализуются
+* text=auto
+
+# Конкретно для svg и manifest файлов
+*.svg text eol=lf
+*.webmanifest text eol=lf
