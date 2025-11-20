@@ -1,5 +1,5 @@
-mixin checkbox-group(title, name, items)
+mixin checkboxGroup(title, name, items)
   .checkbox-group
-    .checkbox-group__title= title
+    .checkbox__title= title
     each item in items
       +checkbox(name, item)

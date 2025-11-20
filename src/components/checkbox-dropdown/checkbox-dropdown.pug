@@ -1,0 +1,8 @@
+mixin checkboxDropdown(title, name, items)
+  .checkbox-dropdown
+    .checkbox-dropdown__header
+      .checkbox__title= title
+      img.dropdown__arrow.checkbox-dropdown__arrow(src=require('@/assets/images/arrow_down.svg'), alt="Стрелка вниз")
+    .checkbox-dropdown__menu
+      each item in items
+        +checkbox(name, item)

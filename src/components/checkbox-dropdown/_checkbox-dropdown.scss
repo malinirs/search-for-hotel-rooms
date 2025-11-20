@@ -1,0 +1,39 @@
+@use 'sass:map';
+@use '../../styles/base/_global.scss' as global;
+
+
+.checkbox-dropdown {
+  width:  264px;
+  padding-right: global.getFieldProp("padding");
+  position: relative;
+}
+
+.checkbox-dropdown__header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.checkbox-dropdown__arrow {
+  padding-bottom: 5px;
+}
+
+.checkbox-dropdown__menu {
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.checkbox-dropdown--expanded {
+  position: relative;
+  z-index: 100;
+
+  .checkbox-dropdown__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10.2px;
+  }
+}

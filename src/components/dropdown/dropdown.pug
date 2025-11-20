@@ -1,10 +1,10 @@
-mixin selectDropdown(name, labelName, dropdownTitle, items)
+mixin dropdown(name, labelName, dropdownTitle, items)
   .form-field
     label.form-field__label #{labelName}
     .form-field__control.dropdown(data-dropdown-type= name)
       .dropdown__header
         span.dropdown__title #{dropdownTitle}
-        img(src=require('@/assets/images/expand_more.svg'), alt="Стрелка вниз").dropdown__arrow
+        img.dropdown__arrow(src=require('@/assets/images/arrow_down.svg'), alt="Стрелка вниз")
       .dropdown__menu
         .dropdown__menu-description
           each item in items

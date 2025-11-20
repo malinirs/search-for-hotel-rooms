@@ -1,6 +1,8 @@
 function initDropdown() {
   const dropdowns = document.querySelectorAll('.dropdown');
 
+  if (!dropdowns.length) return;
+
   dropdowns.forEach(dropdown => {
     const header = dropdown.querySelector('.dropdown__header');
     const title = dropdown.querySelector('.dropdown__title');
@@ -95,6 +97,7 @@ function initDropdown() {
     }
 
     [...plusButtons, ...minusButtons, clearButton].forEach(button => {
+      if (!button) return;
       button.addEventListener('click', (event) => {
         event.stopPropagation();
         if (button.classList.contains('dropdown__button--plus')) {
@@ -106,7 +109,6 @@ function initDropdown() {
     });
 
     if (footer != null) {
-
       clearButton.addEventListener('click', (event) => {
         event.stopPropagation();
         clearValue();
