@@ -1,0 +1,10 @@
+mixin checkboxRich(title, name, items)
+  .checkbox-rich
+    .checkbox__title= title
+    .checkbox-rich__menu
+      .checkbox-rich__item0
+        +checkbox(name, items[0][0])
+        .checkbox-rich__item-description= items[0][1]
+      .checkbox-rich__item1
+        +checkbox(name, items[1][0])
+        .checkbox-rich__item-description= items[1][1]
