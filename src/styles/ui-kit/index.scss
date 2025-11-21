@@ -1,8 +1,5 @@
 // Импорт частичных файлов
 @use './_colors-and-type';
 @use './_form-field.scss';
-@use '../../components/dropdown/dropdown.scss';
-@use '../../components/checkbox/checkbox.scss';
-@use '../../components/checkbox-group/checkbox-group.scss';
-@use '../../components/checkbox-dropdown/checkbox-dropdown.scss';
-@use '../../components/checkbox-rich/checkbox-rich.scss';
+@use '../../components/index-components.scss';
+

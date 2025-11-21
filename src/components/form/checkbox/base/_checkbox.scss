@@ -1,11 +1,9 @@
 @use 'sass:map';
-@use '../../styles/base/_global.scss' as global;
-
+@use '../../../../styles/base/_global.scss' as global;
+@use '../../../../styles/base/typography.scss' as type;
 
 .checkbox {
-  color: global.getColor("dark-shade-50");
-  display: flex;
-  gap: 10px;
+  @extend .body-component;
 }
 
 .checkbox__input {

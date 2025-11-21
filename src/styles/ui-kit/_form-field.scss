@@ -1,6 +1,8 @@
 @use 'sass:map';
 @use '../base/_global.scss' as global;
 @use '../base/_fonts.scss' as fonts;
+@use '../base/typography.scss' as type;
+
 
 .form-field {
   display: flex;
@@ -8,9 +10,8 @@
   gap: 5px;
 
   &__label {
-    font-size: fonts.$font-size-sm;
-    font-weight: fonts.$font-weight-bold;
-    text-transform: uppercase;
+    @extend .title-component;
+    padding-bottom: 0;
   }
 
   &__control {

@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use './global.scss' as global;
+@use './fonts.scss' as fonts;
+
+.title-component {
+  font-size: fonts.$font-size-sm;
+  font-weight: fonts.$font-weight-bold;
+  text-transform: uppercase;
+  padding-bottom: 7px;
+}
+
+.body-component {
+  color: global.getColor("dark-shade-50");
+  display: flex;
+  gap: 10px;
+}
