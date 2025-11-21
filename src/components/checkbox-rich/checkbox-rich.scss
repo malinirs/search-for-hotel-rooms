@@ -16,23 +16,13 @@
   gap: 10px
 }
 
-.checkbox-rich__item0, .checkbox-rich__item1 {
+.checkbox-rich__item {
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
 
-.checkbox-rich__item0 {
-  width: 233px;
-}
-
-.checkbox-rich__item1 {
-  width: 260px;
-}
-
-
-.checkbox-rich__item0 .checkbox__text,
-.checkbox-rich__item1 .checkbox__text {
+.checkbox-rich__item .checkbox__text {
   color: global.getColor("dark-shade-75");
   font-weight: fonts.$font-weight-bold;
 }
