@@ -1,6 +1,6 @@
 mixin checkboxRich(title, name, items)
   .checkbox-rich
-    .checkbox__title= title
+    .title-component= title
     .checkbox-rich__menu
       each item in items
         .checkbox-rich__item(style=`width: ${item.width}`)

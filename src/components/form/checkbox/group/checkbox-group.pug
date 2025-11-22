@@ -1,5 +1,5 @@
 mixin checkboxGroup(title, name, items)
   .checkbox-group
-    .checkbox__title= title
+    .title-component= title
     each item in items
       +checkbox(name, item)

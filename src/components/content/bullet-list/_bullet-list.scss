@@ -1,29 +1,36 @@
 @use 'sass:map';
 @use '../../../styles/base/_global.scss' as global;
-@use '../../../styles/base/typography.scss' as type;
 
 .bullet-list {
   width: 292px;
 }
 
-.bullet-list__title {
-  @extend .title-component;
+.bullet-list > .title-component {
+  padding-bottom: 3px;
+  
 }
 
-.bullet-list__menu {
-  list-style-position: inside;
-  padding: 0;
-  @extend .body-component;
+.bullet-list > .body-component {
   flex-direction: column;
+  list-style-position: outside;
+  padding-left: 21px;
+  padding-right: 30px;
+  gap: 16px;
+  list-style: none;
+
 }
 
 .bullet-list__menu-item {
+  // list-style: none;
+  position: relative;
+  // line-height: 0.3;
 
-  // display: flex;
-  // flex-direction: row;
-}
-
-.bullet-list__menu .bullet-list__menu-item::marker {
-  font-size: 32px;
-  color: global.getColor("dark-shade-25");
+  &::before {
+    content: '•'; // или '\2022' в Юникоде
+    position: absolute;
+    left: -26px;
+    top: -40px;
+    font-size: 70px;
+    color: global.getColor("dark-shade-25");
+  }
 }

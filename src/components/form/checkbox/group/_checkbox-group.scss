@@ -1,5 +1,4 @@
 @use '../../../../styles/base/_fonts.scss' as fonts;
-@use '../../../../styles/base/typography.scss' as type;
 
 .checkbox-group {
   display: flex;
@@ -7,8 +6,4 @@
   gap: 10.56px;
   width: 222px;
   padding: 0;
-}
-
-.checkbox__title {
-  @extend .title-component;
 }

@@ -1,10 +1,5 @@
 @use 'sass:map';
 @use '../../../../styles/base/_global.scss' as global;
-@use '../../../../styles/base/typography.scss' as type;
-
-.checkbox {
-  @extend .body-component;
-}
 
 .checkbox__input {
   appearance: none;
