@@ -1,0 +1,9 @@
+mixin radio(groupName, title, options)
+  .radio
+    if title
+      .title-component= title
+    .radio-group
+      each option in options
+        label.radio-item
+          input.radio-item__input(type="radio" name=groupName value=option.value)
+          span.radio-item__label= option.label
