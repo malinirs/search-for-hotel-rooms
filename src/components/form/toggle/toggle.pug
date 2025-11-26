@@ -1,0 +1,8 @@
+mixin toggle(title, text)
+  .toggle
+    if title
+      .title-component= title
+    label.toggle-item
+      input.toggle__input(type="checkbox")
+      span.toggle__slider
+      span.toggle__text= text

@@ -1,0 +1,54 @@
+@use 'sass:map';
+@use '../../../styles/base/_global.scss' as global;
+
+.toggle .title-component {
+  padding-bottom: 15px;
+}
+
+.toggle-item {
+  cursor: pointer;
+  position: relative;
+  padding-left: 50px;
+}
+
+.toggle__input {
+  // appearance: none;
+  display: none;
+}
+
+.toggle__slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;  
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid global.getColor("dark-shade-25");
+}
+
+.toggle__slider::before {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  left: 2.5px;
+  bottom: 3px;
+  background: global.getColor("dark-shade-25");
+  box-shadow: inset 0 0 0 0px global.getColor("dark-shade-25");
+}
+
+.toggle__input:checked ~ .toggle__slider {
+  background-color: white;
+  border: 1px solid global.getColor("purple");
+}
+
+.toggle__input:checked ~ .toggle__slider::before {
+  transform: translateX(20px);
+}
+
+.toggle__text {
+  color: global.getColor("dark-shade-75")
+}

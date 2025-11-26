@@ -5,5 +5,5 @@ mixin radio(groupName, title, options)
     .radio-group
       each option in options
         label.radio-item
-          input.radio-item__input(type="radio" name=groupName value=option.value)
-          span.radio-item__label= option.label
+          input.radio__input(type="radio" name=groupName value=option.value)
+          span.radio__text= option.text
