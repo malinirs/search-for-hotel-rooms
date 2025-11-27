@@ -4,7 +4,7 @@ mixin dropdown(name, labelName, dropdownTitle, items)
     .form-field__control.dropdown(data-dropdown-type= name)
       .dropdown__header
         span.dropdown__title #{dropdownTitle}
-        img.dropdown__arrow(src=require('@/assets/images/arrow_down.svg'), alt="Стрелка вниз")
+        img.dropdown__arrow(src=require('@/assets/images/arrow_down.svg') alt="Стрелка вниз")
       .dropdown__menu
         .dropdown__menu-description
           each item in items

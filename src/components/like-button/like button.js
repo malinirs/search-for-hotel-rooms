@@ -9,8 +9,8 @@ function initLikeButton() {
   let count = parseInt(countElement.textContent, 10) || 0;
 
   botton.addEventListener('click', () => {
-    botton.classList.toggle('like-button__btn--activ');
-    if (botton.classList.contains('like-button__btn--activ')) {
+    botton.classList.toggle('like-button__btn--active');
+    if (botton.classList.contains('like-button__btn--active')) {
       heart.setAttribute('src', active);
       count++;
     } else {
