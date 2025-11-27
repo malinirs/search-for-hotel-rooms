@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use '../../styles/base/_global.scss' as global;
+@use '../../styles/base/_fonts.scss' as fonts;
+
+.like-button > .title-component {
+  padding-bottom: 16px;
+}
+
+.like-button__btn {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid global.getColor("dark-shade-25");
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+  padding-left: 4px;
+}
+
+.like-button__btn--activ {
+  border: 1px solid global.getColor("purple");
+}
+
+.like-button__btn--activ + .like-button__count {
+  color: global.getColor("purple");
+}
+
+.like-button__heart {
+  width: 10px;
+  height: 10px;
+}
+
+.like-button__count {
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: fonts.$font-weight-regular;
+  font-size: fonts.$font-size-xs;
+  text-align: center;
+  color: global.getColor("dark-shade-25");
+  padding-bottom: 2px;
+  margin: auto;
+}

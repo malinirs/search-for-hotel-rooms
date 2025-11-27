@@ -1,0 +1,7 @@
+mixin like-button(count, title)
+  .like-button
+    if (title)
+      .title-component= title
+    button.like-button__btn(type="button")
+      img.like-button__heart(src=require('@/assets/images/like_button_inactive.svg'), alt="Неактивное сердеско в кнопке лайк")
+      span.like-button__count= count
