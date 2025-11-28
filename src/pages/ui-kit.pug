@@ -46,6 +46,14 @@ block content
       +toggle("Получать спецпредложения", "toggle")
       +likeButton("12", "like button")
       +rateButton("4", "rate button")
-
+      +roomDetails([
+                    { title: "Комфорт", text: "Шумопоглощающие стены", path: "comfort.svg" },
+                    { title: "Удобство", text: "Окно в каждой из спален", path: "convenience.svg" },
+                    { title: "Уют", text: "Номер оснащён камином", path: "cosiness.svg" },
+                  ],
+                  "")
+      +commentCard([
+                    { name: "Мурад Сарафанов", time: "5 дней назад", likes: "12", avatar: "user-1.jpg", text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей." },
+                  ])
 
 

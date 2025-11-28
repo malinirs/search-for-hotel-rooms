@@ -1,0 +1,40 @@
+@use '../../styles/base/_fonts.scss' as fonts;
+
+.room-details {
+  width: 291px;
+
+  .title-component {
+    padding-bottom: 18px;
+  }
+}
+
+.room-details__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-details__body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.room-details__image {
+  width: 38px;
+  height: 38px;
+}
+
+.room-details__description {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.room-details__name {
+  font-weight: fonts.$font-weight-bold;
+}
+
+.room-details__line {
+  padding: 23px 0;
+}

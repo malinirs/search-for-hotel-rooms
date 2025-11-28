@@ -2,23 +2,27 @@ import active from './like_button_active.svg';
 import inactive from './like_button_inactive.svg';
 
 function initLikeButton() {
-  const botton = document.querySelector('.like-button__btn');
-  if (!botton) return;
-  let heart = document.querySelector('.like-button__heart');
-  let countElement = document.querySelector('.like-button__count');
-  let count = parseInt(countElement.textContent, 10) || 0;
+  const buttons = document.querySelectorAll('.like-button__btn');
+  if (!buttons.length) return;
 
-  botton.addEventListener('click', () => {
-    botton.classList.toggle('like-button__btn--active');
-    if (botton.classList.contains('like-button__btn--active')) {
-      heart.setAttribute('src', active);
-      count++;
-    } else {
-      heart.setAttribute('src', inactive);
-      count--;
-    }
-    countElement.textContent = count;
-  })
+  buttons.forEach(button => {
+    let heart = button.querySelector('.like-button__heart');
+    let countElement = button.querySelector('.like-button__count');
+    let count = parseInt(countElement.textContent, 10) || 0;
+
+    button.addEventListener('click', () => {
+      button.classList.toggle('like-button__btn--active');
+
+      if (button.classList.contains('like-button__btn--active')) {
+        heart.setAttribute('src', active);
+        count++;
+      } else {
+        heart.setAttribute('src', inactive);
+        count--;
+      }
+      countElement.textContent = count;
+    })
+  });
 }
 
 initLikeButton();

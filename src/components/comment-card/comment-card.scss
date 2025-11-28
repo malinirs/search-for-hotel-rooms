@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use '../../styles/base/_global.scss' as global;
+@use '../../styles/base/_fonts.scss' as fonts;
+
+.comment-card {
+  width: 711px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.comment-card__aside,
+.comment-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-card__avatar {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.comment-card__content {
+  color: global.getColor("dark-shade-75");
+}
+
+.comment-card__name,
+.comment-card__time {
+  padding-bottom: 7px;
+}
+
+.comment-card__name {
+  font-weight: fonts.$font-weight-bold;
+}
+
+.comment-card__text {
+  width: 653px;
+  margin: 0;
+  padding-top: 7px;
+  line-height: 24px;
+}

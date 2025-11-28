@@ -1,0 +1,12 @@
+mixin roomDetails(items, title)
+  .room-details
+    if (title)
+      .title-component= title
+    each item in items
+      .room-details__item
+        .room-details__body
+          img.room-details__image(src=require('@/components/room-details/' + item.path) alt="Иконка сведений о номере")
+          .room-details__description
+            .room-details__name= item.title
+            .room-details__text= item.text
+        img.room-details__line(src=require('@/components/room-details/line.svg') alt="Линия")

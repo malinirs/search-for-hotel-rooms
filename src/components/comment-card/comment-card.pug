@@ -1,0 +1,10 @@
+mixin commentCard(items)
+  each item in items
+    .comment-card
+      .comment-card__aside
+        img.comment-card__avatar(src=require('@/assets/images/avatars/' + item.avatar) alt="Аватарка")
+        +likeButton(item.likes)
+      .comment-card__content
+        span.comment-card__name= item.name
+        span.comment-card__time= item.time
+        p.comment-card__text= item.text
