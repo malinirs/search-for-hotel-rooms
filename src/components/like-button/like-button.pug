@@ -3,5 +3,5 @@ mixin likeButton(count, title)
     if (title)
       .title-component= title
     button.like-button__btn(type="button")
-      img.like-button__heart(src=require('@/assets/images/like_button_inactive.svg'), alt="Неактивное сердеско в кнопке лайк")
+      img.like-button__heart(src=require('@/components/like-button/like_button_inactive.svg') alt="Неактивное сердечко в кнопке лайк")
       span.like-button__count= count

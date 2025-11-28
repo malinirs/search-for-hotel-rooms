@@ -14,7 +14,7 @@
 
 .checkbox__input:checked {
   border-color: global.getColor("purple");
-  background-image: url('@/assets/images/checkbox.svg');
+  background-image: url('../components/form/checkbox/base/checkbox.svg');
   background-repeat: no-repeat;
   background-position: center;
 }

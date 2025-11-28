@@ -5,7 +5,7 @@ mixin rateButton(grade, title)
     .rate-button__grade
       - let count
       - for (let i = 0; i < grade; i++)
-        img.rate-button__star(src=require('@/assets/images/star_painted.svg') alt="Оценка номера")
+        img.rate-button__star(src=require('@/components/rate-button/star_painted.svg') alt="Оценка номера")
         - count = i
       - for (let j = count; j < 4; j++)
-        img.rate-button__star(src=require('@/assets/images/star_unpainted.svg') alt="Оценка номера")
+        img.rate-button__star(src=require('@/components/rate-button/star_unpainted.svg') alt="Оценка номера")

@@ -1,5 +1,5 @@
-import active from '@/assets/images/like_button_active.svg';
-import inactive from '@/assets/images/like_button_inactive.svg';
+import active from './like_button_active.svg';
+import inactive from './like_button_inactive.svg';
 
 function initLikeButton() {
   const botton = document.querySelector('.like-button__btn');

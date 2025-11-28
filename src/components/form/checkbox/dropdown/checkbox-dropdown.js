@@ -1,5 +1,5 @@
-import arrowUp from '@/assets/images/arrow_up.svg';
-import arrowDown from '@/assets/images/arrow_down.svg'
+import arrowUp from '@/assets/images/icons/arrows/arrow_up.svg';
+import arrowDown from '@/assets/images/icons/arrows/arrow_down.svg'
 
 function initCheckboxDropdown() {
   const dropdown = document.querySelector('.checkbox-dropdown');
