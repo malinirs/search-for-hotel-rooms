@@ -1,0 +1,93 @@
+@use 'sass:map';
+@use '../../../styles/base/_global.scss' as global;
+@use '../../../styles/base/_fonts.scss' as fonts;
+
+.range-slider > .title-component {
+  padding-bottom: 22px;
+}
+
+// .range-controls {
+//   position: relative;
+
+//   margin-bottom: 32px;
+// }
+
+// .range-controls .scale {
+//   height: 2px;
+
+//   background: rgba(255, 255, 255, 0.3);
+// }
+
+// .range-controls .bar {
+//   width: 80%;
+//   height: 2px;
+
+//   background: #ffffff;
+// }
+
+// .range-toggle {
+//   position: absolute;
+//   top: -9px;
+
+//   width: 4px;
+//   height: 4px;
+
+//   background: #ababab;
+//   border: 8px solid #ffffff;
+//   border-radius: 50%;
+//   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+//   cursor: pointer;
+// }
+
+// .range-toggle:hover {
+//   background: #1c4f80;
+// }
+
+// .range-toggle-min {
+//   left: 0;
+// }
+
+// .range-toggle-max {
+//   left: 80%;
+// }
+
+// .range-controls {
+  // position: relative;
+  // width: 266px;
+// }
+
+.range-scale {
+  position: relative;
+  width: 266px;
+  height: 6px;
+  border: 1px solid global.getColor("dark-shade-25");
+  border-radius: 3px;
+  // box-sizing: border-box;
+}
+
+.range-toggle {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(global.getColor("green"), rgba(102, 210, 234, 1));
+  left: 0;
+  top: -4px;
+  box-shadow: 0 0 0 2px rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.minPrice {
+  left: 29%;
+}
+
+.maxPrice {
+  left: 80%;
+}
+
+.filled-part {
+  height: 6px;
+  width: 80%;
+  background: linear-gradient(global.getColor("green"), rgba(102, 210, 234, 1));
+}

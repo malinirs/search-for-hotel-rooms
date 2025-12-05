@@ -6,22 +6,26 @@
   width: 711px;
   display: flex;
   flex-direction: row;
-  gap: 6px;
+  gap: 12px;
 }
 
-.comment-card__aside,
-.comment-card__content {
+.comment-card__aside {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 14px
 }
 
 .comment-card__avatar {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
 .comment-card__content {
+  display: flex;
+  flex-direction: column;
   color: global.getColor("dark-shade-75");
 }
 
